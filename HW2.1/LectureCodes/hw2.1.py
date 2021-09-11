@@ -183,14 +183,14 @@ class DataClass:
 			else: #GDM momentum
 				p = p - LR*gradient -alpha*pold
 			pold = temp
-			print(p)
+	#		print(p)
 		return p
 
 	def fit(self):
 		#TRAIN MODEL USING SCIPY MINIMIZ 
 		# res = minimize(self.loss, p, method=OPT_ALGO, tol=1e-15)
 		# popt=res.x; print("OPTIMAL PARAM:",popt)
-		res = self.optimizer(self.loss, p, 'GDM', 0.001, 'stochastic')# batch, mini-batch, stochastic
+		res = self.optimizer(self.loss, p, 'GDM', 0.001, 'batch')# batch, mini-batch, stochastic
 		popt=res; print("OPTIMAL PARAM:",popt)
 
 		#PLOT TRAINING AND VALIDATION LOSS AT END
