@@ -165,7 +165,7 @@ class DataClass:
 		gradient = np.array([1.0, 0.0, 0.0, 0.0])
 		count = 0
 		pold = 0
-		while np.linalg.norm(gradient) > 1e-1 and count < 10000:
+		while np.linalg.norm(gradient) > 1e-3 and count < 10000:
 			count += 1
 			h = 1e-12
 
@@ -190,7 +190,7 @@ class DataClass:
 		#TRAIN MODEL USING SCIPY MINIMIZ 
 		# res = minimize(self.loss, p, method=OPT_ALGO, tol=1e-15)
 		# popt=res.x; print("OPTIMAL PARAM:",popt)
-		res = self.optimizer(self.loss, p, 'GDM', 0.001, 'batch')# batch, mini-batch, stochastic
+		res = self.optimizer(self.loss, p, 'GDM', 0.05, 'batch')# batch, mini-batch, stochastic
 		popt=res; print("OPTIMAL PARAM:",popt)
 
 		#PLOT TRAINING AND VALIDATION LOSS AT END
