@@ -1,0 +1,47 @@
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense (Dense)                (None, 3)                 2355      
+_________________________________________________________________
+dense_1 (Dense)              (None, 784)               3136      
+=================================================================
+Total params: 5,491
+Trainable params: 5,491
+Non-trainable params: 0
+_________________________________________________________________
+2021-11-13 12:06:16.077721: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-11-13 12:06:16.080311: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 1599995000 Hz
+Epoch 1/4
+48/48 [==============================] - 3s 35ms/step - loss: 0.0972 - val_loss: 0.0650
+Epoch 2/4
+48/48 [==============================] - 1s 21ms/step - loss: 0.0637 - val_loss: 0.0604
+Epoch 3/4
+48/48 [==============================] - 1s 22ms/step - loss: 0.0593 - val_loss: 0.0558
+Epoch 4/4
+48/48 [==============================] - 1s 22ms/step - loss: 0.0550 - val_loss: 0.0535
+dict_keys(['loss', 'val_loss'])
+1/1 [==============================] - 1s 909ms/step - loss: 0.0535
+threshold is 
+0.21381543576717377
+(10,)
+9904.366067485582
+anomaly
+11847.039491843992
+anomaly
+2053.441531104628
+anomaly
+4297.89088769418
+anomaly
+7224.60018776035
+anomaly
+9889.003767476825
+anomaly
+4965.0149871710755
+anomaly
+15085.65434537571
+anomaly
+2905.3278302631998
+anomaly
+8401.6876502201
+anomaly
